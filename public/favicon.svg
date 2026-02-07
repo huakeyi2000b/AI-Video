@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#a855f7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- 背景圆形 -->
+  <circle cx="50" cy="50" r="48" fill="url(#grad)"/>
+  
+  <!-- 播放按钮 -->
+  <path d="M 35 25 L 35 75 L 75 50 Z" fill="white" opacity="0.95"/>
+  
+  <!-- 装饰星星 -->
+  <circle cx="25" cy="25" r="3" fill="white" opacity="0.8"/>
+  <circle cx="75" cy="30" r="2" fill="white" opacity="0.6"/>
+  <circle cx="70" cy="70" r="2.5" fill="white" opacity="0.7"/>
+</svg>
