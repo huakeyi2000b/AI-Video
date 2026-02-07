@@ -12,6 +12,25 @@ interface ResultDisplayProps {
 export function ResultDisplay({ result }: ResultDisplayProps) {
   const isImage = result.type === "image";
   
+  const handleDownload = async () => {
+    try {
+      const response = await fetch(result.url);
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `${isImage ? 'image' : 'video'}_${result.timestamp}.${isImage ? 'jpg' : 'mp4'}`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      window.URL.revokeObjectURL(url);
+    } catch (error) {
+      console.error('下载失败:', error);
+      // 如果跨域下载失败，回退到直接打开
+      window.open(result.url, '_blank');
+    }
+  };
+  
   return (
     <div className="glass-card neon-border p-6 space-y-4">
       <div className="flex items-center justify-between">
@@ -22,16 +41,17 @@ export function ResultDisplay({ result }: ResultDisplayProps) {
             target="_blank"
             rel="noopener noreferrer"
             className="p-2 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors text-muted-foreground hover:text-foreground"
+            title="在新标签页打开"
           >
             <ExternalLink className="w-4 h-4" />
           </a>
-          <a
-            href={result.url}
-            download
+          <button
+            onClick={handleDownload}
             className="p-2 rounded-lg bg-primary/20 hover:bg-primary/30 transition-colors text-primary"
+            title="下载"
           >
             <Download className="w-4 h-4" />
-          </a>
+          </button>
         </div>
       </div>
 
