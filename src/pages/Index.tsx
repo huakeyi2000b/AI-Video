@@ -389,8 +389,8 @@ const Index = () => {
         </div>
 
         {/* Footer */}
-        <footer className="text-center text-xs text-muted-foreground/40 pt-8 mt-8 border-t border-border/30">
-          Copyright © 2025 蓝色空间-AI 故事创作平台. All rights reserved.
+        <footer className="text-center text-xs text-white/60 pt-8 mt-8 border-t border-border/30">
+          Copyright © 2025 <a href="https://as3.5918918.xyz" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">蓝色空间-AI 故事创作平台</a>. All rights reserved.
         </footer>
       </div>
     </div>
