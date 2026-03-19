@@ -310,9 +310,9 @@ const Index = () => {
 
               {/* Error */}
               {error && (
-                <div className="flex items-center gap-2 px-4 py-3 rounded-lg bg-destructive/10 border border-destructive/20 text-destructive text-sm">
-                  <AlertCircle className="w-4 h-4 shrink-0" />
-                  {error}
+                <div className="flex items-start gap-2 px-4 py-3 rounded-lg bg-destructive/10 border border-destructive/20 text-destructive text-sm overflow-hidden">
+                  <AlertCircle className="w-4 h-4 shrink-0 mt-0.5" />
+                  <span className="break-all">{error}</span>
                 </div>
               )}
 
