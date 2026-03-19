@@ -1,8 +1,10 @@
 const WORKER_URL = "https://web001.gs1.indevs.in";
+const UPLOAD_TOKEN = import.meta.env.VITE_UPLOAD_TOKEN || "zhonghua";
 
 export async function uploadToOSS(file: File): Promise<string> {
   const formData = new FormData();
   formData.append("file", file);
+  formData.append("token", UPLOAD_TOKEN);
 
   const response = await fetch(WORKER_URL, {
     method: "POST",
