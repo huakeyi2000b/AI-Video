@@ -13,6 +13,8 @@ const models = [
   { id: "flux-2-klein-9b", name: "Flux Klein 9B", icon: "💎" },
   { id: "plutogen-o1", name: "Plutogen O1", icon: "🌟" },
   { id: "z-image", name: "Z-Image", icon: "⚡" },
+  { id: "special-berry", name: "Special Berry", icon: "🍓" },
+  { id: "dirtberry", name: "Dirtberry", icon: "🫐" },
 ];
 
 export function ImageModelSelector({ value, onChange }: ImageModelSelectorProps) {

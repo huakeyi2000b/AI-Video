@@ -36,6 +36,12 @@ const ratios = {
     { id: "4:3", label: "4:3", desc: "横向" },
     { id: "3:4", label: "3:4", desc: "竖向" },
   ],
+  "special-berry": [
+    { id: "1:1", label: "1:1", desc: "正方形" },
+  ],
+  "dirtberry": [
+    { id: "1:1", label: "1:1", desc: "正方形" },
+  ],
 };
 
 export function ImageAspectRatioSelector({ value, onChange, model }: ImageAspectRatioSelectorProps) {

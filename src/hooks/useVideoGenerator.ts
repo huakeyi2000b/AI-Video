@@ -80,7 +80,7 @@ export function useVideoGenerator({ apiKey }: UseVideoGeneratorOptions) {
           // 图片生成模式
           
           // imagen-3 和 plutogen-o1 只支持基础参数
-          if (imageModel !== "imagen-3" && imageModel !== "plutogen-o1") {
+          if (imageModel !== "imagen-3" && imageModel !== "plutogen-o1" && imageModel !== "special-berry" && imageModel !== "dirtberry") {
             body.aspectRatio = aspectRatio || "1:1";
             body.resolution = "1k";
           }
