@@ -14,7 +14,7 @@ const models = [
   { id: "plutogen-o1", name: "Plutogen O1", icon: "🌟" },
   { id: "z-image", name: "Z-Image", icon: "⚡" },
   { id: "special-berry", name: "Special Berry", icon: "🍓" },
-  { id: "dirtberry", name: "Dirtberry", icon: "🫐" },
+  { id: "dirtberry", name: "Dirtberry", icon: "🌑" },
 ];
 
 export function ImageModelSelector({ value, onChange }: ImageModelSelectorProps) {
